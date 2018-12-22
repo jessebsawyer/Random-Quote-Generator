@@ -40,23 +40,24 @@ function getRandomColour() {
 
 function printQuote() {
   let result = getRandomQuote();
+  console.log(result.quote);
   let x = document.getElementsByClassName('quote');
   let y = document.getElementsByClassName('source');
   let q = document.getElementsByClassName('citation');
   let z = document.getElementsByClassName('year');
   let message = '';
-  if (quotes[result] === quotes[0]) {
+  if (result.quote === quotes[0]) {
     message = x[0].innerText = quotes[0].quote;
     message += y[0].innerText = quotes[0].author;
     message += q[0].innerText = quotes[0].citation;
-  } else if (quotes[result] === quotes[1]){
+  } else if (result.quote === quotes[1]){
     message += x[0].innerText = quotes[1].quote;
     message += y[0].innerText = quotes[1].author;
 
-  } else if (quotes[result] === quotes[2]) {
+  } else if (result.quote === quotes[2]) {
     message += x[0].innerText = quotes[2].quote;
     message += y[0].innerText = quotes[2].author;
-  } else if (quotes[result] === quotes[3]) {
+  } else if (result.quote === quotes[3]) {
     message += x[0].innerText = quotes[3].quote;
     message += y[0].innerText = quotes[3].author;
   } else {
@@ -66,7 +67,7 @@ function printQuote() {
   }
   return message;
 }
-printQuote();
+printQuote()
 
 
 
