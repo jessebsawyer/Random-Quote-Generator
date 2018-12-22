@@ -40,35 +40,15 @@ function getRandomColour() {
 
 function printQuote() {
   let result = getRandomQuote();
-  console.log(result.quote);
-  let x = document.getElementsByClassName('quote');
-  let y = document.getElementsByClassName('source');
-  let q = document.getElementsByClassName('citation');
-  let z = document.getElementsByClassName('year');
+  let x = document.getElementById("quote-box");
   let message = '';
+  message += "<p>" + result.quote + "</p>";
  
-    message = x[0].result.quote = quotes[0].quote;
-    message += y[0].result.quote = quotes[0].author;
-    message += q[0].result.quote = quotes[0].citation;
-  console.log(message);
     
-    //message += x[0].innerText = quotes[1].quote;
-   // message += y[0].innerText = quotes[1].author;
-
-  
-    //message += x[0].innerText = quotes[2].quote;
-    //message += y[0].innerText = quotes[2].author;
-  
-    //message += x[0].innerText = quotes[3].quote;
-    //message += y[0].innerText = quotes[3].author;
-  
-   // message += x[0].innerText = quotes[4].quote;
-    //message += y[0].innerText = quotes[4].author;
-    //message += z[0].innerText = quotes[4].year;
-  
-  //return message;
+    
+    
 }
-//printQuote() 
+
 
 
 
