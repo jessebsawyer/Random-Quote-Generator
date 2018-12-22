@@ -46,28 +46,30 @@ function printQuote() {
   let q = document.getElementsByClassName('citation');
   let z = document.getElementsByClassName('year');
   let message = '';
-  if (result.quote === quotes[0]) {
-    message = x[0].innerText = quotes[0].quote;
-    message += y[0].innerText = quotes[0].author;
-    message += q[0].innerText = quotes[0].citation;
-  } else if (result.quote === quotes[1]){
-    message += x[0].innerText = quotes[1].quote;
-    message += y[0].innerText = quotes[1].author;
+ 
+    message = x[0].result.quote = quotes[0].quote;
+    message += y[0].result.quote = quotes[0].author;
+    message += q[0].result.quote = quotes[0].citation;
+  console.log(message);
+    
+    //message += x[0].innerText = quotes[1].quote;
+   // message += y[0].innerText = quotes[1].author;
 
-  } else if (result.quote === quotes[2]) {
-    message += x[0].innerText = quotes[2].quote;
-    message += y[0].innerText = quotes[2].author;
-  } else if (result.quote === quotes[3]) {
-    message += x[0].innerText = quotes[3].quote;
-    message += y[0].innerText = quotes[3].author;
-  } else {
-    message += x[0].innerText = quotes[4].quote;
-    message += y[0].innerText = quotes[4].author;
-    message += z[0].innerText = quotes[4].year;
-  }
-  return message;
+  
+    //message += x[0].innerText = quotes[2].quote;
+    //message += y[0].innerText = quotes[2].author;
+  
+    //message += x[0].innerText = quotes[3].quote;
+    //message += y[0].innerText = quotes[3].author;
+  
+   // message += x[0].innerText = quotes[4].quote;
+    //message += y[0].innerText = quotes[4].author;
+    //message += z[0].innerText = quotes[4].year;
+  
+  //return message;
 }
-printQuote()
+//printQuote() 
+
 
 
 
