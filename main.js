@@ -46,6 +46,8 @@ function printQuote() {
   let message = '';
   if(result.citation === undefined) {  
     console.log('This quote does not have a citation')
+    
+
   } 
   message += '<p class="quote">' + result.quote + "</p>";
   message += '<p class="source">' + result.author + "</p>";
@@ -57,6 +59,9 @@ function printQuote() {
 }
 // Runs the function.
 printQuote();
+
+// Set timer for page refresh.
+setInterval(printQuote,5000);
 
 
 // Runs both the printQuote and getRandomColour function upon cicking.
