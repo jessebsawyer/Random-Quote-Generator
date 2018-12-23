@@ -44,14 +44,15 @@ function printQuote() {
   let x = document.getElementById("quote-box");
   let z = document.body.style.backgroundColor = getRandomColour();
   let message = '';
+  
+  message += '<p class="quote">' + result.quote + "</p>";
+  message += '<p class="source">' + result.author + "</p>";
   if (result.citation) {
     message += '<p class="source">' + result.citation + "</p>";
 }
   if (result.year) {
     message += '<p class="year">' + result.year + "</p>";
   }
-  message += '<p class="quote">' + result.quote + "</p>";
-  message += '<p class="source">' + result.author + "</p>";
   x.innerHTML = message;
   return z;
   
