@@ -1,24 +1,24 @@
 // List of quotes.
 let quotes = [
 {quote: 'To be or not to be',
- author: '-William Shakespeare',
+ source: '-William Shakespeare',
  citation: 'Hamlet'
 },
 
 {quote: 'Only I can change my life. No one can do it for me.',
- author: '-Carol Burnett'
+ source: '-Carol Burnett'
 },
 
 {quote: 'You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.',
- author: '-Dr. Seuss'
+ source: '-Dr. Seuss'
 },
 
 {quote: 'Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do.',
- author: '-Mark Twain'
+ source: '-Mark Twain'
 },
 
 {quote: 'Get busy living or get busy dying.',
- author: '-Stephen King',
+ source: '-Stephen King',
  year: '1994'
 }
 
@@ -46,7 +46,7 @@ function printQuote() {
   let message = '';
   
   message += '<p class="quote">' + result.quote + "</p>";
-  message += '<p class="source">' + result.author + "</p>";
+  message += '<p class="source">' + result.source + "</p>";
   if (result.citation) {
     message += '<span class="citation">' + result.citation + "</span>";
 }
