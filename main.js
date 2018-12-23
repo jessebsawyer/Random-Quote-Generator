@@ -1,3 +1,4 @@
+// List of quotes.
 let quotes = [
 {quote: 'To be or not to be',
  author: '-William Shakespeare',
@@ -24,25 +25,28 @@ let quotes = [
 ];
 
 
-
+// Get a random quote. 
 function getRandomQuote() {
   let ranNum = Math.floor(Math.random() * quotes.length);
     return quotes[ranNum];
 }
 
 
-
+// Get a random color. 
 function getRandomColour() {
   let bColours = ['#008080', '#00FFFF', '#FF00FF', '#8B4513', '#8B4513' ];
   let ranCol = Math.floor(Math.random()* bColours.length);
     return bColours[ranCol];
 }
-
+// Prints the Array to the screen while also changing the background colour.
 function printQuote() {
   let result = getRandomQuote();
   let x = document.getElementById("quote-box");
   let z = document.body.style.backgroundColor = getRandomColour();
   let message = '';
+  if(result.citation === undefined) {  
+    console.log('This quote does not have a citation')
+  } 
   message += '<p class="quote">' + result.quote + "</p>";
   message += '<p class="source">' + result.author + "</p>";
   message += '<p class="source">' + result.citation + "</p>";
@@ -51,11 +55,11 @@ function printQuote() {
   return z;
   
 }
-
+// Runs the function.
 printQuote();
 
 
-
+// Runs both the printQuote and getRandomColour function upon cicking.
 document.getElementById('loadQuote').addEventListener("click", printQuote, getRandomColour, false);
 
 
