@@ -44,15 +44,14 @@ function printQuote() {
   let x = document.getElementById("quote-box");
   let z = document.body.style.backgroundColor = getRandomColour();
   let message = '';
-  if(result.citation === undefined) {  
-    console.log('This quote does not have a citation')
-    
-
-  } 
+  if (result.citation) {
+    message += '<p class="source">' + result.citation + "</p>";
+}
+  if (result.year) {
+    message += '<p class="year">' + result.year + "</p>";
+  }
   message += '<p class="quote">' + result.quote + "</p>";
   message += '<p class="source">' + result.author + "</p>";
-  message += '<p class="source">' + result.citation + "</p>";
-  message += '<p class="year">' + result.year + "</p>";
   x.innerHTML = message;
   return z;
   
