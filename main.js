@@ -33,7 +33,7 @@ function getRandomQuote() {
 
 
 function getRandomColour() {
-  let bColours = [];
+  let bColours = ['#008080', '#00FFFF', '#FF00FF', '#8B4513', '#8B4513' ];
   let ranCol = Math.floor(Math.random()* bColours.length);
     return bColours[ranCol];
 }
@@ -41,14 +41,22 @@ function getRandomColour() {
 function printQuote() {
   let result = getRandomQuote();
   let x = document.getElementById("quote-box");
+  let z = document.body.style.backgroundColor = getRandomColour();
   let message = '';
-  message += "<p>" + result.quote + "</p>";
- 
-    
-    
-    
+  message += '<p class="quote">' + result.quote + "</p>";
+  message += '<p class="source">' + result.author + "</p>";
+  message += '<p class="source">' + result.citation + "</p>";
+  message += '<p class="year">' + result.year + "</p>";
+  x.innerHTML = message;
+  return z;
+  
 }
 
+printQuote();
+
+
+
+document.getElementById('loadQuote').addEventListener("click", printQuote, getRandomColour, false);
 
 
 
