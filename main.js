@@ -46,14 +46,16 @@ function printQuote() {
   let message = '';
   
   message += '<p class="quote">' + result.quote + "</p>";
-  message += '<p class="source">' + result.source + "</p>";
+  message += '<p class="source">' + result.source;
   if (result.citation) {
     message += '<span class="citation">' + result.citation + "</span>";
 }
   if (result.year) {
-    message += '<span class="year">' + result.year + "</span>";
+    message += '<span class="year">' + result.year + "</span>" + "</p>";
   }
   x.innerHTML = message;
+  // Shows that the colour changes everytime.
+  console.log(z);
   return z;
   
 }
