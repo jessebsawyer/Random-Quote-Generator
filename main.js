@@ -51,8 +51,9 @@ function printQuote() {
     message += '<span class="citation">' + result.citation + "</span>";
 }
   if (result.year) {
-    message += '<span class="year">' + result.year + "</span>" + "</p>";
+    message += '<span class="year">' + result.year + "</span>";
   }
+    message += '</p>';
   x.innerHTML = message;
   // Shows that the colour changes everytime.
   console.log(z);
