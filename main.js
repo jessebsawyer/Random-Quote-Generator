@@ -6,13 +6,11 @@ let quotes = [
 },
 
 {quote: 'Only I can change my life. No one can do it for me.',
- source: '-Carol Burnett',
- category: 'Life Quotes'
-},
+ source: '-Carol Burnett'
+ },
 
 {quote: 'You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.',
- source: '-Dr. Seuss',
- category: 'Books'
+ source: '-Dr. Seuss'
 },
 
 {quote: 'Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do.',
@@ -56,10 +54,7 @@ function printQuote() {
     message += '<span class="year">' + result.year + "</span>";
   }
     message += '</p>';
-  if (result.category) {
-    message += '<p class="category">' + result.category + '</p>'
-  }
-  x.innerHTML = message;
+    x.innerHTML = message;
   // Shows that the colour changes everytime.
   console.log(z);
   return z;
